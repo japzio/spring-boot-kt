@@ -16,6 +16,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: maven
+          cache: gradle
       - name: Build and Test
-        run: ./mvnw -B test --file pom.xml
+        run: ./gradlew build --no-daemon
